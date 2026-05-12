@@ -110,7 +110,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
-          className="font-script text-gold italic text-[2.2rem] sm:text-[3rem] md:text-[3.8rem] lg:text-[4.5rem] leading-none -mt-2 md:-mt-4 ml-6 md:ml-12"
+          className="font-script text-olive italic text-[2rem] sm:text-[2.8rem] md:text-[3.5rem] lg:text-[4.2rem] leading-none -mt-1 md:-mt-2 ml-6 md:ml-8"
         >
           Inn
         </motion.div>
@@ -122,8 +122,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.5 }}
           className="mt-12 md:mt-16"
         >
-          <button className="bg-white text-black px-8 py-3 text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-gold hover:text-white transition-all duration-500 hover:scale-105 transform active:scale-95 shadow-xl">
-            / START YOUR JOURNEY /
+          <button className="relative overflow-hidden border border-beige/40 text-beige px-12 py-4 text-[10px] md:text-[11px] uppercase tracking-[0.5em] font-bold transition-all duration-700 group shadow-2xl">
+            <span className="relative z-10 group-hover:text-olive transition-colors duration-500">
+                Explore The Inn
+            </span>
+            <div className="absolute inset-0 bg-beige translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
           </button>
         </motion.div>
       </div>
