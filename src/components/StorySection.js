@@ -43,14 +43,14 @@ export default function StorySection() {
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <section ref={pinRef} className="h-screen w-full bg-olive overflow-hidden flex items-center justify-center">
-        <div className="relative z-10 container mx-auto text-beige">
-            <div className="relative w-full max-w-4xl mx-auto text-center flex items-center justify-center min-h-[300px]">
+      <section ref={pinRef} className="h-screen min-h-[600px] w-full bg-olive overflow-hidden flex items-center justify-center">
+        <div className="relative z-10 container mx-auto text-beige px-6">
+            <div className="relative w-full max-w-4xl mx-auto text-center flex items-center justify-center min-h-[350px] sm:min-h-[300px]">
             
             {/* Frame 1 Content */}
             <div ref={text1Ref} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-8 tracking-widest uppercase">The Art of Silence</h2>
-                <p className="font-sans text-beige/60 text-lg md:text-xl tracking-widest leading-relaxed max-w-2xl font-light">
+                <h2 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 tracking-widest uppercase px-4">The Art of Silence</h2>
+                <p className="font-sans text-beige/60 text-base sm:text-lg md:text-xl tracking-widest leading-relaxed max-w-2xl font-light">
                 In a world that never sleeps, Genista Inn offers a sanctuary where time slows down. 
                 Discover the profound elegance of stillness.
                 </p>
@@ -58,8 +58,8 @@ export default function StorySection() {
 
             {/* Frame 2 Content */}
             <div ref={text2Ref} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-8 tracking-widest uppercase">Refined Luxury</h2>
-                <p className="font-sans text-beige/60 text-lg md:text-xl tracking-widest leading-relaxed max-w-2xl font-light">
+                <h2 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 tracking-widest uppercase px-4">Refined Luxury</h2>
+                <p className="font-sans text-beige/60 text-base sm:text-lg md:text-xl tracking-widest leading-relaxed max-w-2xl font-light">
                 Every detail is curated to evoke a sense of heritage and modern sophistication. 
                 Hand-crafted interiors meet world-class service.
                 </p>
@@ -67,20 +67,21 @@ export default function StorySection() {
 
             {/* Frame 3 Content */}
             <div ref={text3Ref} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-                <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-8 tracking-widest uppercase">Beyond Stay</h2>
-                <p className="font-sans text-beige/60 text-lg md:text-xl tracking-widest leading-relaxed max-w-2xl font-light italic">
+                <h2 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 tracking-widest uppercase px-4">Beyond Stay</h2>
+                <p className="font-sans text-beige/60 text-base sm:text-lg md:text-xl tracking-widest leading-relaxed max-w-2xl font-light italic">
                 "It's not just a room, it's a chapter in your story."
                 </p>
-                <div className="mt-12 h-[1px] w-24 bg-beige/30 mx-auto" />
+                <div className="mt-8 sm:mt-12 h-[1px] w-16 sm:w-24 bg-beige/30 mx-auto" />
             </div>
 
             </div>
         </div>
 
         {/* Decorative Corner Elements */}
-        <div className="absolute top-12 left-12 border-l border-t border-white/10 w-12 h-12" />
-        <div className="absolute bottom-12 right-12 border-r border-b border-white/10 w-12 h-12" />
+        <div className="absolute top-8 left-8 sm:top-12 sm:left-12 border-l border-t border-white/10 w-8 h-8 sm:w-12 sm:h-12" />
+        <div className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 border-r border-b border-white/10 w-8 h-8 sm:w-12 sm:h-12" />
       </section>
     </div>
+
   );
 }

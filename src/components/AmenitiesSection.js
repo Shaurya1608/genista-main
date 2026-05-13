@@ -57,7 +57,7 @@ export default function AmenitiesSection() {
     <section ref={containerRef} className="bg-beige py-16 md:py-20 border-t border-olive/5 overflow-hidden">
       <div className="container mx-auto px-6 text-center">
         <div className="overflow-hidden mb-12">
-            <h2 className="amenities-title font-serif text-4xl md:text-5xl lg:text-6xl uppercase tracking-widest text-olive">
+            <h2 className="amenities-title font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-widest text-olive">
                 Amenities
             </h2>
         </div>

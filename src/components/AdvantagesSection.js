@@ -67,7 +67,7 @@ export default function AdvantagesSection() {
             Why Choose Hotel Genista Inn
           </span>
           <div className="overflow-hidden">
-            <h2 className="adv-title font-serif text-5xl md:text-6xl lg:text-7xl uppercase tracking-widest text-olive">
+            <h2 className="adv-title font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-widest text-olive">
                 The Advantages
             </h2>
           </div>

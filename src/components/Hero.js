@@ -86,7 +86,7 @@ export default function Hero() {
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4">
         
         {/* Brand Name with staggered letter reveal */}
-        <div ref={titleRef} className="flex">
+        <div ref={titleRef} className="flex flex-wrap justify-center">
           {titleWords.map((letter, i) => (
             <motion.span
               key={i}
@@ -97,7 +97,7 @@ export default function Hero() {
                 delay: i * 0.1, 
                 ease: [0.215, 0.61, 0.355, 1] 
               }}
-              className="font-serif text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] uppercase tracking-[0.25em] text-white leading-none font-light inline-block"
+              className="font-serif text-[2.8rem] xs:text-[3.2rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-white leading-none font-light inline-block"
             >
               {letter}
             </motion.span>
@@ -110,7 +110,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
-          className="font-script text-olive italic text-[2rem] sm:text-[2.8rem] md:text-[3.5rem] lg:text-[4.2rem] leading-none -mt-1 md:-mt-2 ml-6 md:ml-8"
+          className="font-script text-olive italic text-[1.8rem] sm:text-[2.8rem] md:text-[3.5rem] lg:text-[4.2rem] leading-none -mt-1 sm:-mt-2 ml-4 sm:ml-8"
         >
           Inn
         </motion.div>
@@ -120,9 +120,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.5 }}
-          className="mt-12 md:mt-16"
+          className="mt-10 md:mt-16"
         >
-          <button className="relative overflow-hidden border border-beige/40 text-beige px-12 py-4 text-[10px] md:text-[11px] uppercase tracking-[0.5em] font-bold transition-all duration-700 group shadow-2xl">
+          <button className="relative overflow-hidden border border-beige/40 text-beige px-8 sm:px-12 py-3.5 sm:py-4 text-[9px] md:text-[11px] uppercase tracking-[0.4em] sm:tracking-[0.5em] font-bold transition-all duration-700 group shadow-2xl">
             <span className="relative z-10 group-hover:text-olive transition-colors duration-500">
                 Explore The Inn
             </span>
@@ -137,12 +137,13 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, delay: 2 }}
-        className="relative z-10 w-full overflow-hidden pb-12"
+        className="relative z-10 w-full overflow-hidden pb-8 sm:pb-12"
       >
-        <p className="font-serif uppercase text-white/60 whitespace-nowrap text-[1.1rem] sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.6vw] leading-none tracking-[0.4em] text-center">
+        <p className="font-serif uppercase text-white/60 whitespace-nowrap text-[0.9rem] sm:text-[1.1rem] md:text-[1.5rem] lg:text-[1.6vw] leading-none tracking-[0.3em] sm:tracking-[0.4em] text-center px-4">
           Sanctuary of Refined Living
         </p>
       </motion.div>
+
 
     </section>
   );

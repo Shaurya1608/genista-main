@@ -14,7 +14,7 @@ export default function Navbar({ isScrolled }) {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 px-6 md:px-12 py-3 md:py-4 ${
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 px-4 sm:px-6 md:px-12 py-3 md:py-4 ${
       isScrolled ? 'bg-beige/80 backdrop-blur-xl py-2 md:py-2.5 shadow-sm' : 'bg-transparent'
     }`}>
       <div className="max-w-[1800px] mx-auto flex items-center justify-between">
@@ -25,12 +25,12 @@ export default function Navbar({ isScrolled }) {
           animate={{ opacity: 1, x: 0 }}
           className="flex flex-col cursor-pointer group"
         >
-          <span className={`font-serif text-lg md:text-xl tracking-[0.3em] uppercase transition-colors duration-500 ${
+          <span className={`font-serif text-base sm:text-lg md:text-xl tracking-[0.3em] uppercase transition-colors duration-500 ${
             isScrolled ? 'text-olive' : 'text-white'
           }`}>
             GENISTA
           </span>
-          <span className="font-script text-olive text-sm italic leading-none mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span className="font-script text-olive text-xs sm:text-sm italic leading-none mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             Inn
           </span>
         </motion.div>
@@ -57,7 +57,7 @@ export default function Navbar({ isScrolled }) {
         </div>
 
         {/* Right: CTA & Mobile Toggle */}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4 sm:gap-8">
           <motion.button 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -75,11 +75,12 @@ export default function Navbar({ isScrolled }) {
 
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden transition-colors duration-300 ${
+            className={`lg:hidden transition-colors duration-300 p-2 -mr-2 ${
                 isScrolled ? 'text-olive' : 'text-white'
             }`}
+            aria-label="Toggle Menu"
           >
-            {isMobileMenuOpen ? <X size={24} strokeWidth={1} /> : <Menu size={24} strokeWidth={1} />}
+            {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
           </button>
         </div>
       </div>
@@ -88,27 +89,30 @@ export default function Navbar({ isScrolled }) {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-beige border-t border-olive/5 py-12 px-6 flex flex-col items-center gap-8 lg:hidden shadow-2xl"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="absolute top-full left-0 w-full bg-beige border-t border-olive/5 overflow-hidden lg:hidden shadow-2xl"
           >
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-olive text-sm uppercase tracking-[0.5em] font-bold hover:text-olive-light transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-            <button className="mt-4 bg-olive text-beige px-10 py-4 text-[10px] uppercase tracking-[0.4em] font-bold">
-              Book a Stay
-            </button>
+            <div className="py-12 px-6 flex flex-col items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-olive text-sm sm:text-base uppercase tracking-[0.5em] font-bold hover:text-olive-light transition-colors"
+                >
+                  {link.name}
+                </a>
+              ))}
+              <button className="mt-4 bg-olive text-beige px-10 py-4 text-[10px] uppercase tracking-[0.4em] font-bold w-full max-w-[280px]">
+                Book a Stay
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
     </nav>
+
   );
 }

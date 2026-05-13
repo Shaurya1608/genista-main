@@ -60,10 +60,10 @@ export default function WellnessSection() {
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
         
         {/* Left Content */}
-        <div className="order-2 lg:order-1">
-          <span className="text-olive font-script text-2xl mb-3 block">Tranquility</span>
+        <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <span className="text-olive font-script text-xl sm:text-2xl mb-3 block">Tranquility</span>
           
-          <h2 ref={titleRef} className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 uppercase tracking-widest leading-tight overflow-hidden">
+          <h2 ref={titleRef} className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 uppercase tracking-widest leading-tight overflow-hidden">
             <div className="overflow-hidden mb-1">
               <span className="line-inner inline-block translate-y-[100%]">Relaxation &</span>
             </div>
@@ -72,12 +72,12 @@ export default function WellnessSection() {
             </div>
           </h2>
 
-          <div ref={textRef} className="opacity-0 translate-y-6">
-            <p className="font-sans text-olive/70 text-base md:text-lg tracking-widest leading-relaxed max-w-lg mb-10 font-light">
+          <div ref={textRef} className="opacity-0 translate-y-6 flex flex-col items-center lg:items-start">
+            <p className="font-sans text-olive/70 text-sm sm:text-base md:text-lg tracking-widest leading-relaxed max-w-lg mb-10 font-light">
               Discover the perfect blend of tranquility and rejuvenation with our relaxation and wellness offerings. 
               Whether you're seeking a peaceful escape or therapeutic treatments.
             </p>
-            <button className="group relative overflow-hidden bg-olive text-beige px-8 py-3.5 text-[10px] uppercase tracking-[0.4em] font-bold transition-all duration-500 shadow-xl">
+            <button className="group relative overflow-hidden bg-olive text-beige px-8 py-3.5 text-[9px] sm:text-[10px] uppercase tracking-[0.4em] font-bold transition-all duration-500 shadow-xl">
               <span className="relative z-10 group-hover:text-olive transition-colors duration-500">View Prices</span>
               <div className="absolute inset-0 bg-beige translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500" />
             </button>
@@ -85,7 +85,7 @@ export default function WellnessSection() {
         </div>
 
         {/* Right Image with Clip Path Reveal */}
-        <div className="order-1 lg:order-2 relative h-[50vh] lg:h-[70vh]">
+        <div className="order-1 lg:order-2 relative h-[40vh] sm:h-[50vh] lg:h-[70vh]">
           <div ref={imageWrapperRef} className="relative w-full h-full overflow-hidden shadow-2xl">
             <Image
               src="/landing/hotel-imagges/Premium Room (4).jpg.jpeg"
@@ -95,10 +95,11 @@ export default function WellnessSection() {
             />
           </div>
           {/* Floating border decor */}
-          <div className="absolute -inset-3 border border-olive/20 -z-10 translate-x-3 translate-y-3" />
+          <div className="absolute -inset-2 sm:-inset-3 border border-olive/20 -z-10 translate-x-2 sm:translate-x-3 translate-y-2 sm:translate-y-3" />
         </div>
 
       </div>
     </section>
   );
+
 }
